@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: compile, distill mini pack, audit
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 -m py_compile scripts/*.py
+          python3 scripts/make_mini_pack.py
+          python3 scripts/distill_pack.py --root examples/mini-pack
+          python3 scripts/audit_pack.py --root examples/mini-pack
