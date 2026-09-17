@@ -840,6 +840,9 @@ def file_md5(path: Path) -> str:
 
 
 def pick_type(rec: dict) -> tuple[str, str, str]:
+    override = rec.get("fontFamilies")
+    if isinstance(override, (list, tuple)) and len(override) >= 3:
+        return str(override[0]), str(override[1]), str(override[2])
     slug = rec.get("slug") or ""
     if slug in BRAND_TYPE:
         return BRAND_TYPE[slug]

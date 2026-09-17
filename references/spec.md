@@ -2,6 +2,8 @@
 
 对齐 [Google Labs design.md](https://github.com/google-labs-code/design.md) `alpha`。默认导出用 camelCase 色键（与若干可视化编辑器的 `DESIGN.md` 导出对齐）。
 
+输入可以是：公开网页 URL、本地 HTML、截图、名称/备注，或风格包 `catalog/entries.jsonl`。不要假定只有 jsonl。
+
 ## 文件结构
 
 1. YAML front matter

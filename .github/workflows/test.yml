@@ -20,3 +20,4 @@ jobs:
           python3 scripts/make_mini_pack.py
           python3 scripts/distill_pack.py --root examples/mini-pack
           python3 scripts/audit_pack.py --root examples/mini-pack
+          python3 scripts/test_distill_entry.py

@@ -2,6 +2,8 @@
 
 打包或对外发布前跑 `python3 scripts/audit_pack.py --root <pack>`，必须全部 PASS。
 
+单条（链接 / 截图 / 备注）走 `distill_entry.py`，不套下面的包级门槛。抽查：八节齐全、How to use 含名称+主色+字体+URL、主色对照截图或 CSS。
+
 ## 硬门槛
 
 | 门 | 通过条件 |
